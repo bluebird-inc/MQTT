@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.onsoim.mqtt"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.onsoim.mqtt"
@@ -36,13 +36,15 @@ android {
 }
 
 dependencies {
-
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.activity)
     implementation(libs.androidx.appcompat)
-    implementation(libs.paho.org.eclipse.paho.client.mqttv3)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.material)
+    implementation(libs.org.eclipse.paho.client.mqttv3)
 
     testImplementation(libs.junit)
 }
